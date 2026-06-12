@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aldo Monroy — Portafolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Crítico: oculta páginas sin importar si styles.css carga -->
+  <style>
+    .page { display: none !important; }
+    .page.active { display: flex !important; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════ NAV ═══════════════ -->
+<nav id="main-nav">
+  <div class="nav-icons">
+    <button type="button" class="nav-icon" id="nav-home-center" onclick="showPage('home')" title="Inicio">
+      <i class="fas fa-home"></i>
+    </button>
+    <button type="button" class="nav-icon" id="nav-about"     onclick="showPage('about')"      title="Sobre mí">
+      <i class="fas fa-user"></i>
+    </button>
+    <button type="button" class="nav-icon" id="nav-proyectos" onclick="showPage('proyectos')"  title="Proyectos">
+      <i class="fas fa-briefcase"></i>
+    </button>
+    <button type="button" class="nav-icon" id="nav-demo"      onclick="showPage('demo-reels')" title="Demo Reel">
+      <i class="fab fa-youtube"></i>
+    </button>
+    <button type="button" class="nav-icon" id="nav-servicios" onclick="showPage('servicios')"  title="Servicios">
+      <i class="fas fa-th-large"></i>
+    </button>
+    <button type="button" class="nav-icon" id="nav-contacto"  onclick="showPage('contacto')"   title="Contacto">
+      <i class="fas fa-address-card"></i>
+    </button>
+    <div id="nav-indicator" style="
+      position: absolute;
+      bottom: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #2ecc71, #7c3aed);
+      border-radius: 2px;
+      transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                  width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      pointer-events: none;
+    "></div>
+  </div>
+</nav>
+
+<!-- ═══════════════ HOME ═══════════════ -->
+<div id="home" class="page active">
+  <div class="home-page-wrapper">
+
+    <!-- Barra de título -->
+    <div class="home-title-bar">
+      <span>PORTAFOLIO</span>
+    </div>
+
+    <!-- Aldo Monroy -->
+    <div class="hcard-wrapper hw-hero" onclick="showPage('about')">
+      <div class="hcard-inner">
+        <img src="images/aldo.jpg" alt="Aldo Monroy">
+        <div class="hcard-lbl">
+          <h2>Aldo<br>Monroy</h2>
+          <p>Diseñador y Animador Visual</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Demo Reel -->
+    <div class="hcard-wrapper hw-demo" onclick="showPage('demo-reels')">
+      <div class="hcard-inner">
+        <img src="images/Demo reel.png" alt="Demo Reel">
+        <div class="hcard-lbl">
+          <h2>DEMO REEL</h2>
+          <small>Demo reel de animación 2025</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contacto -->
+    <div class="hcard-wrapper hw-contacto" onclick="showPage('contacto')">
+      <div class="hcard-inner">
+        <img src="images/home_contacto.jpg" alt="Contacto">
+        <div class="hcard-lbl">
+          <h3>CONTACTO</h3>
+          <p>Construyamos algo increíble.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Servicios -->
+    <div class="hcard-wrapper hw-servicios" onclick="showPage('servicios')">
+      <div class="hcard-inner">
+        <img src="images/home_servicios.jpg" alt="Servicios">
+        <div class="hcard-lbl">
+          <h3>SERVICIOS</h3>
+          <p>Servicios creativos y narrativas integrales.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proyectos -->
+    <div class="hcard-wrapper hw-proyectos" onclick="showPage('proyectos')">
+      <div class="hcard-inner">
+        <img src="images/home_proyectos.jpg" alt="Proyectos">
+        <div class="hcard-lbl">
+          <h3>PROYECTOS</h3>
+          <p>Diseño y animación digital.</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /home-page-wrapper -->
+</div>
+
+<!-- ═══════════════ ABOUT ME ═══════════════ -->
+<div id="about" class="page">
+  <div class="about-wrap">
+
+    <!-- Columna izquierda: foto + iconos debajo -->
+    <div class="about-left-col">
+      <div class="about-photo">
+        <img src="images/aldo.jpg" alt="Aldo Monroy">
+      </div>
+      <div class="sw-icons">
+        <div class="sw sw-img" title="Blender">
+          <img src="images/blender_logo.jpg" alt="Blender">
+        </div>
+        <div class="sw sw-img" title="Maya">
+          <img src="images/maya_logo.jpg" alt="Maya">
+        </div>
+        <div class="sw sw-img" title="Substance Painter">
+          <img src="images/substance-painter-logo.png" alt="Substance Painter">
+        </div>
+        <div class="sw sw-img" title="Adobe Illustrator">
+          <img src="images/ai.png" alt="Illustrator">
+        </div>
+        <div class="sw sw-img" title="Adobe Premiere Pro">
+          <img src="images/Adobe_Premiere_Pro_CC_icon.svg.png" alt="Premiere Pro">
+        </div>
+        <div class="sw sw-img" title="Figma">
+          <img src="images/figma_logo.png" alt="Figma">
+        </div>
+        <div class="sw sw-img" title="Adobe After Effects">
+          <img src="images/Adobe_After_Effects_CC_icon.svg.png" alt="After Effects">
+        </div>
+        <div class="sw sw-img" title="ZBrush">
+          <img src="images/Zbrush.png" alt="ZBrush">
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna derecha: info -->
+    <div class="about-info">
+      <h1>ALDO MONROY</h1>
+      <p class="sub">Diseñador y Animador Visual</p>
+
+      <div class="sec-title">SOBRE MÍ</div>
+      <p class="about-txt">Estudiante activo de 8° semestre de Diseño y Animación Digital con experiencia en estrategia para redes sociales, así como en el diseño integral de marcas, desde su conceptualización hasta su aplicación en distintos medios. Me caracterizo por una actitud positiva, proactividad y mentalidad de crecimiento, disfrutando el trabajo en equipo y la creación de soluciones innovadoras.</p>
+
+      <div class="sec-title">MI TRABAJO</div>
+      <p class="about-txt">A lo largo de mi trayectoria he trabajado en la producción y edición de contenido para redes sociales, así como en el diseño integral de marcas, desde su conceptualización hasta su aplicación en distintos medios. He participado en proyectos de branding, desarrollo de imagen corporativa y creación de elementos visuales estratégicos, fortaleciendo mi capacidad para comunicar ideas de manera clara y atractiva.</p>
+
+      <div class="about-2col">
+        <div>
+          <div class="sec-title">ACADÉMICAMENTE</div>
+          <p class="about-txt">Mi formación combina una base analítica con estudios en Diseño y Animación Digital, complementados con una certificación en Diseño UX de Google, lo que me permite crear soluciones visuales creativas y centradas en el usuario.</p>
+        </div>
+        <div>
+          <div class="sec-title">FORTALEZAS</div>
+          <p class="about-txt">A lo largo de mi desarrollo profesional he fortalecido habilidades clave como el trabajo en equipo, la comunicación efectiva y la resolución creativa de problemas, participando en distintos proyectos donde la organización y la colaboración han sido fundamentales.</p>
+        </div>
+      </div>
+
+      <a href="CV_AldoMonroy.pdf" download="CV_Aldo_Monroy.pdf" class="btn-cta" style="margin-top:32px">DESCARGA CV</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════ PROYECTOS ═══════════════ -->
+<div id="proyectos" class="page">
+  <div class="proj-banner">
+    <img src="images/banner_proyectos.jpg" alt="Proyectos">
+    <h1>PROYECTOS</h1>
+  </div>
+
+  <div class="tab-nav">
+    <button type="button" class="tab-btn active" onclick="switchTab('proyectos','ptab-3d',this)">MODELADO Y<br>ANIMACIÓN 3D</button>
+    <button type="button" class="tab-btn"        onclick="switchTab('proyectos','ptab-wb',this)">DISEÑO<br>CONCEPTUAL</button>
+    <button type="button" class="tab-btn"        onclick="switchTab('proyectos','ptab-brand',this)">BRANDING Y<br>DISEÑO</button>
+  </div>
+
+  <!-- Tab 3D -->
+  <div id="ptab-3d" class="tab-content active">
+    <div class="proj-body">
+      <div class="proj-desc">
+        <p>Presento una selección de mis trabajos en modelado y animación 3D, donde exploro la creación de personajes, objetos y entornos digitales. A través de estos proyectos, desarrollo desde la conceptualización hasta la animación final, integrando técnicas de modelado, texturizado e iluminación para construir piezas visuales dinámicas que reflejan mi crecimiento técnico y creativo.</p>
+        <button type="button" class="btn-cta" onclick="showPage('contacto')">CONSTRUYAMOS ALGO INCREÍBLE.</button>
+      </div>
+      <div class="proj-imgs">
+        <div class="proj-card" onclick="showPage('proyecto-detalle')">
+          <img src="images/p3d_1.png" alt="Personaje 3D">
+        </div>
+        <div class="proj-card" onclick="showPage('detalle-3d-2')">
+          <img src="images/p3d_2.jpg" alt="Escena 3D">
+        </div>
+        <div class="proj-card" onclick="showPage('detalle-3d-3')">
+          <img src="images/p3d_3.jpg" alt="Personaje">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab Worldbuilding -->
+  <div id="ptab-wb" class="tab-content">
+    <div class="proj-body">
+      <div class="proj-desc">
+        <p>En esta sección presento mis trabajos de worldbuilding y narrativa, donde desarrollo universos conceptuales con identidad, historia y coherencia interna. A través de la creación de personajes, culturas y contextos, exploro la construcción de historias que conectan emocionalmente y dan profundidad a cada proyecto, combinando creatividad y estructura para generar experiencias narrativas sólidas y memorables.</p>
+        <button type="button" class="btn-cta" onclick="showPage('contacto')">CONSTRUYAMOS ALGO INCREÍBLE.</button>
+      </div>
+      <div class="proj-imgs">
+        <div class="proj-card" onclick="showPage('detalle-wb-1')">
+          <img src="images/pwb_1.jpg" alt="Personaje WB 1">
+        </div>
+        <div class="proj-card" onclick="showPage('detalle-wb-2')">
+          <img src="images/pwb_2.JPG" alt="Revista">
+        </div>
+        <div class="proj-card" onclick="showPage('detalle-wb-3')">
+          <img src="images/pwb_3.png" alt="Cartel">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab Branding -->
+  <div id="ptab-brand" class="tab-content">
+    <div class="proj-body">
+      <div class="proj-desc">
+        <p>En esta sección presento mis trabajos en branding y diseño, donde desarrollo identidades visuales estratégicas que comunican la esencia de cada marca. A través de la conceptualización, creación de lineamientos gráficos y aplicaciones en distintos medios, busco construir propuestas coherentes, funcionales y memorables, combinando creatividad y enfoque estratégico para generar un impacto visual efectivo.</p>
+        <button type="button" class="btn-cta" onclick="showPage('contacto')">CONSTRUYAMOS ALGO INCREÍBLE.</button>
+      </div>
+      <div class="proj-imgs">
+        <div class="proj-card" onclick="showPage('detalle-brand-1')">
+          <img src="images/pb_1.png" alt="Da'Pa">
+        </div>
+        <div class="proj-card" onclick="showPage('detalle-brand-2')">
+          <img src="images/pb_2.png" alt="Eli">
+        </div>
+        <div class="proj-card" onclick="showPage('detalle-brand-3')">
+          <img src="images/pb_3.png" alt="Roja Rada">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════ PROJECT DETAIL: LIKE HIM ═══════════════ -->
+<div id="proyecto-detalle" class="page">
+  <div class="det-top">
+    <button type="button" class="btn-back" onclick="showPage('proyectos')">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+  </div>
+
+  <div class="det-banner">
+    <div class="det-banner-text">
+      <h1>LIKE HIM</h1>
+      <div class="dsub">Video Musical</div>
+    </div>
+    <div class="dbg">
+      <img src="images/likehim_banner.jpg" alt="Like Him">
+    </div>
+  </div>
+
+  <p class="det-desc">Este proyecto consiste en la creación de un video musical animado inspirado en la canción "Like Him" de Tyler, The Creator, donde se explora una narrativa visual centrada en la identidad, la percepción y la introspección emocional. A través de la animación, se busca reinterpretar el mensaje de la canción mediante una propuesta estética y simbólica, combinando elementos visuales, construcción de personaje y lenguaje cinematográfico.</p>
+
+  <div class="proc-tabs">
+    <button type="button" class="proc-tab active" onclick="switchProc('proc-idea',this)" title="Ideación"><i class="fas fa-lightbulb"></i></button>
+    <button type="button" class="proc-tab"        onclick="switchProc('proc-dev',this)"  title="Desarrollo Visual"><i class="fas fa-pen-nib"></i></button>
+    <button type="button" class="proc-tab"        onclick="switchProc('proc-adj',this)"  title="Ajustes"><i class="fas fa-desktop"></i></button>
+    <button type="button" class="proc-tab"        onclick="switchProc('proc-fin',this)"  title="Resultado Final"><i class="fas fa-book"></i></button>
+  </div>
+
+  <!-- Ideación -->
+  <div id="proc-idea" class="proc-content active">
+    <div class="proc-imgs">
+      <div class="proc-img"><img src="images/lh_idea_1.jpg"></div>
+    </div>
+    <div class="proc-text">
+      <h3>IDEACIÓN</h3>
+      <p>Durante la fase de ideación se definió una estética visual enfocada en transmitir la carga emocional e introspectiva del proyecto, optando por un estilo que equilibra lo simbólico con lo expresivo.</p>
+      <p>Las decisiones artísticas se centraron en el uso intencional del color, la iluminación y las formas para representar estados internos del personaje, así como en la simplificación y estilización de elementos para dirigir la atención hacia la narrativa.</p>
+    </div>
+  </div>
+
+  <!-- Desarrollo Visual -->
+  <div id="proc-dev" class="proc-content">
+    <div class="proc-imgs">
+      <div class="proc-img"><img src="images/lh_dev_1.jpg"></div>
+    </div>
+    <div class="proc-text">
+      <h3>DESARROLLO VISUAL</h3>
+      <p>Durante la fase de desarrollo visual se definió una estética enfocada en transmitir la carga emocional e introspectiva del proyecto, optando por un estilo que equilibra lo simbólico con lo expresivo.</p>
+      <p>Las decisiones artísticas se centraron en el uso intencional del color, la iluminación y las formas para representar estados internos del personaje, combinando creatividad y técnica.</p>
+    </div>
+  </div>
+
+  <!-- Ajustes -->
+  <div id="proc-adj" class="proc-content">
+    <div class="proc-imgs">
+      <div class="proc-img"><img src="images/lh_adj_1.jpg"></div>
+    </div>
+    <div class="proc-text">
+      <h3>AJUSTES</h3>
+      <p>Durante la fase de producción se presentaron diversos desafíos, principalmente relacionados con la gestión del tiempo y las limitaciones del equipo de renderizado disponible. Estas condiciones implicaron optimizar procesos y priorizar escenas clave.</p>
+      <p>A partir de ello, se adaptó el flujo de trabajo para mantener la calidad visual dentro de los tiempos establecidos, resolviendo problemas técnicos de manera eficiente y fortaleciendo la capacidad de toma de decisiones bajo restricciones reales de producción.</p>
+    </div>
+  </div>
+
+  <!-- Resultado Final -->
+  <div id="proc-fin" class="proc-content">
+    <div class="proc-imgs">
+      <div class="proc-img"><img src="images/lh_final.jpg"></div>
+    </div>
+    <div class="proc-text">
+      <h3>RESULTADO FINAL</h3>
+      <p>El resultado final del proyecto es una pieza animada que integra de manera coherente los elementos narrativos, visuales y técnicos desarrollados a lo largo del proceso.</p>
+      <p>A pesar de las limitaciones enfrentadas, se logró una propuesta que comunica eficazmente la intención emocional y conceptual planteada desde el inicio, destacando el uso del movimiento, la composición y la estética para reforzar la narrativa.</p>
+    </div>
+  </div>
+
+  <div class="cta-row">
+    <button type="button" class="btn-cta" onclick="showPage('contacto')">CONSTRUYAMOS ALGO INCREÍBLE.</button>
+  </div>
+</div>
+
+<!-- ═══════════════ DETALLE: ESCENA NOCTURNA ═══════════════ -->
+<div id="detalle-3d-2" class="page">
+  <div class="det-top">
+    <button type="button" class="btn-back" onclick="showPage('proyectos')"><i class="fas fa-arrow-left"></i></button>
+  </div>
+  <div class="det-banner">
+    <div class="det-banner-text"><h1>ESCENA NOCTURNA</h1><div class="dsub">Modelado y Animación 3D</div></div>
+    <div class="dbg"><img src="images/p3d_2.jpg" alt="Escena Nocturna"></div>
+  </div>
+  <p class="det-desc">Proyecto de modelado de entorno urbano nocturno con iluminación atmosférica, explorando técnicas de texturizado y composición de escena.</p>
+  <div class="proc-tabs">
+    <button type="button" class="proc-tab active" onclick="switchProc('d2-idea',this)" title="Ideación"><i class="fas fa-lightbulb"></i></button>
+    <button type="button" class="proc-tab" onclick="switchProc('d2-dev',this)" title="Desarrollo Visual"><i class="fas fa-pen-nib"></i></button>
+    <button type="button" class="proc-tab" onclick="switchProc('d2-adj',this)" title="Ajustes"><i class="fas fa-desktop"></i></button>
+    <button type="button" class="proc-tab" onclick="switchProc('d2-fin',this)" title="Resultado Final"><i class="fas fa-book"></i></button>
+  </div>
+  <div id="d2-idea" class="proc-content active">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Ideacion.jpg"></div></div>
+    <div class="proc-text"><h3>IDEACIÓN</h3><p>El proyecto surge a partir de la intención de traducir el lenguaje musical a una experiencia visual. Tomamos como punto de partida la canción Like Him, buscando capturar su tono melancólico, introspectivo y emocional.</p><p>Iniciamos el proceso recopilando referencias visuales y conceptuales, lo que nos permitió establecer una base sólida para la narrativa y la ambientación</p></div>
+  </div>
+  <div id="d2-dev" class="proc-content">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Definicion.jpg"></div></div>
+    <div class="proc-text"><h3>DESARROLLO VISUAL</h3><p>Se estableció una dirección estética basada en el trasfondo narrativo y en la construcción del personaje, asegurando que cada decisión visual respondiera a su contexto emocional y social.</p><p>La propuesta visual se inspira en los barrios populares de Nueva York, particularmente en aquellos donde convergen influencias de comunidades latinas y afroamericanas. Esta fusión cultural no solo define el entorno, sino que también da origen a la identidad del personaje, reflejando una mezcla de raíces, códigos visuales y dinámicas sociales propias de estos espacios.</p><p>A partir de esta base sociocultural, se construyó el perfil del personaje: un individuo de clase media-baja, marcado por la ausencia de la figura paterna y una relación distante con su madre. Estos elementos influyen directamente en la narrativa visual, guiando decisiones como la ambientación, la iluminación y el lenguaje corporal, con el objetivo de transmitir su estado emocional y su historia de manera sutil pero contundente.</p></div>
+  </div>
+  <div id="d2-adj" class="proc-content">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Ajustes.jpg"></div></div>
+    <div class="proc-text"><h3>AJUSTES</h3><p>Durante esta etapa se desarrollaron los procesos de modelado, texturizado y layout, consolidando los elementos principales de la escena. Sin embargo, al integrar los componentes en la composición final (particularmente en los exteriores) se detectaron inconsistencias en la iluminación y en la proyección de sombras, las cuales resultaban poco convincentes y no lograban comunicar la atmósfera deseada.</p><p>Se realizaron ajustes en parámetros como el Ambient Occlusion y se llevaron a cabo pruebas de render dentro de Autodesk Maya; no obstante, estos cambios no fueron suficientes para alcanzar el nivel de definición y profundidad visual buscado.</p><p>Este análisis permitió identificar la necesidad de replantear la estrategia de iluminación y renderizado, orientando el proceso hacia soluciones más precisas que reforzaran la intención narrativa del proyecto.</p></div>
+  </div>
+  <div id="d2-fin" class="proc-content">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Producto final.jpg"></div></div>
+    <div class="proc-text"><h3>RESULTADO FINAL</h3><p>La pieza final integra modelado, texturizado e iluminación en una composición visualmente impactante y coherente con el concepto inicial.</p><p>El resultado refleja el dominio técnico y la visión artística desarrollada a lo largo de todo el proceso de producción.</p></div>
+  </div>
+  <div class="cta-row"><button type="button" class="btn-cta" onclick="showPage('contacto')">CONSTRUYAMOS ALGO INCREÍBLE.</button></div>
+</div>
+
+<!-- ═══════════════ DETALLE: PERSONAJE ANIMADO ═══════════════ -->
+<div id="detalle-3d-3" class="page">
+  <div class="det-top">
+    <button type="button" class="btn-back" onclick="showPage('proyectos')"><i class="fas fa-arrow-left"></i></button>
+  </div>
+  <div class="det-banner">
+    <div class="det-banner-text"><h1>Caramelon</h1><div class="dsub">Modelado y Animación 3D</div></div>
+    <div class="dbg"><img src="images/pose 3 - copia.jpg" alt="Personaje Animado"></div>
+  </div>
+  <p class="det-desc">Desarrollo completo de una animación 3D para un corto infantil. Se llevó el proceso de modelado, texturizado, rigging y animación</p>
+  <div class="proc-tabs">
+    <button type="button" class="proc-tab active" onclick="switchProc('d3-idea',this)" title="Ideación"><i class="fas fa-lightbulb"></i></button>
+    <button type="button" class="proc-tab" onclick="switchProc('d3-dev',this)" title="Desarrollo Visual"><i class="fas fa-pen-nib"></i></button>
+    <button type="button" class="proc-tab" onclick="switchProc('d3-adj',this)" title="Ajustes"><i class="fas fa-desktop"></i></button>
+    <button type="button" class="proc-tab" onclick="switchProc('d3-fin',this)" title="Resultado Final"><i class="fas fa-book"></i></button>
+  </div>
+  <div id="d3-idea" class="proc-content active">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Caramelon ideacion.jpg"></div></div>
+    <div class="proc-text"><h3>IDEACIÓN</h3><p>El proyecto nace a partir de la creación de una serie animada titulada “Somos Monstruos”, enfocada en explorar cómo los niños experimentan, interpretan y procesan distintas problemáticas de la vida cotidiana.</p><p>La propuesta se construye a partir de metáforas visuales simples, donde los “monstruos” representan emociones, hábitos o conflictos internos. A través de este enfoque, la serie busca traducir experiencias complejas en un lenguaje accesible tanto para niños como para un público general, permitiendo una mejor comprensión del mundo emocional infantil.</p><p>El objetivo principal es generar empatía y reflexión, mostrando cómo situaciones aparentemente pequeñas pueden tener un impacto profundo en el desarrollo emocional de un niño.</p></div>
+  </div>
+  <div id="d3-dev" class="proc-content">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Caramelon Conceptualizacion.jpg"></div></div>
+    <div class="proc-text"><h3>DESARROLLO VISUAL</h3><p>Dentro de este universo se desarrollaron dos figuras centrales:</p><p>Michael, un niño que encuentra refugio emocional en el consumo de dulces como mecanismo de evasión.</p><p>Caramelón, la manifestación monstruosa de este hábito, representando las consecuencias físicas y emocionales de su conducta.</p></div>
+  </div>
+  <div id="d3-adj" class="proc-content">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Caramelon Problemas.jpg"></div></div>
+    <div class="proc-text"><h3>AJUSTES</h3><p>Durante la producción se identificó una discrepancia entre la intención visual del proyecto y el resultado técnico inicial:</p><p>El problema fue el uso de shaders base generaba un acabado demasiado realista, alejándose del estilo caricaturesco buscado</p><p>Como solución se desarrollaron shaders personalizados mediante nodos, permitiendo un acabado más plano, estilizado y acorde a la dirección artística</p></div>
+  </div>
+  <div id="d3-fin" class="proc-content">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/p3d_3.jpg"></div></div>
+    <div class="proc-text"><h3>RESULTADO FINAL</h3><p>El resultado final es una propuesta narrativa que combina diseño de personaje, simbolismo y animación para abordar temas relevantes en la infancia.</p><p>El proyecto logra generar impacto a través de una historia accesible y visualmente atractiva, transmitiendo un mensaje sobre la relación con la alimentación y las dinámicas dentro del núcleo familiar.</p></div>
+  </div>
+  <div class="cta-row"><button type="button" class="btn-cta" onclick="showPage('contacto')">CONSTRUYAMOS ALGO INCREÍBLE.</button></div>
+</div>
+
+<!-- ═══════════════ DETALLE: PERSONAJE COSTERO ═══════════════ -->
+<div id="detalle-wb-1" class="page">
+  <div class="det-top">
+    <button type="button" class="btn-back" onclick="showPage('proyectos')"><i class="fas fa-arrow-left"></i></button>
+  </div>
+  <div class="det-banner">
+    <div class="det-banner-text"><h1>PERSONAJE COSTERO</h1><div class="dsub">Diseño Conceptual</div></div>
+    <div class="dbg"><img src="images/pwb_1.jpg" alt="Personaje Costero"></div>
+  </div>
+  <p class="det-desc">Creación de personaje principal para universo narrativo original, desarrollando su historia, cultura y contexto visual único.</p>
+  <div class="proc-tabs">
+    <button type="button" class="proc-tab active" onclick="switchProc('w1-idea',this)" title="Ideación"><i class="fas fa-lightbulb"></i></button>
+    <button type="button" class="proc-tab" onclick="switchProc('w1-dev',this)" title="Desarrollo Visual"><i class="fas fa-pen-nib"></i></button>
+    <button type="button" class="proc-tab" onclick="switchProc('w1-adj',this)" title="Ajustes"><i class="fas fa-desktop"></i></button>
+    <button type="button" class="proc-tab" onclick="switchProc('w1-fin',this)" title="Resultado Final"><i class="fas fa-book"></i></button>
+  </div>
+  <div id="w1-idea" class="proc-content active">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Ideacion Costero.jpg"></div></div>
+    <div class="proc-text"><h3>IDEACIÓN</h3><p>El personaje debía construirse sobre cuatro conceptos base: principal, valiente, amable y confiable. Cada uno implica lecturas visuales distintas, por lo que el reto fue encontrar el lenguaje de formas que los integrara con coherencia en un solo diseño.</p><p>Las culturas polinesias  y la ballena funcionaron como marco de referencia no decorativo sino narrativo: sus patrones geométricos, tatuajes de carga simbólica y paleta orgánica —mar, tierra, cielo— se incorporaron como parte de la identidad del personaje, dándole contexto dentro del mundo que habita.</p></div>
+  </div>
+  <div id="w1-dev" class="proc-content">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Conceptualizacion Costero.jpg"></div></div>
+    <div class="proc-text"><h3>DESARROLLO VISUAL</h3><p>Con la dirección cultural definida, el diseño se construyó pensando en el movimiento. Para animación 2D, la eficiencia de las formas es tan importante como su expresividad: cada línea tiene una consecuencia técnica.</p><p>Se eliminaron accesorios secundarios, texturas ornamentales y detalles decorativos que dificultaban los ciclos de movimiento, conservando con cuidado los marcadores culturales que anclan la identidad polinesia. El resultado es un personaje más limpio y ágil, sin perder autenticidad.</p></div>
+  </div>
+  <div id="w1-adj" class="proc-content">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Turn around Costero.jpg"></div></div>
+    <div class="proc-text"><h3>AJUSTES</h3><p>Con el diseño base establecido, comenzó el proceso de simplificación para el formato de animación. Simplificar no es empobrecer: es decidir qué elementos son esenciales para la identidad del personaje y cuáles generan ruido en el contexto animado.</p><p>Los ajustes finales aseguraron que el diseño comunicara efectivamente la personalidad y el rol del personaje en la narrativa.</p></div>
+  </div>
+  <div id="w1-fin" class="proc-content">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/producto FInal coster.jpg"></div></div>
+    <div class="proc-text"><h3>RESULTADO FINAL</h3><p>El personaje resultante es funcional para animación 2D e ideal para el worldbuilding al que pertenece. Cumple los cuatro conceptos originales de forma coherente, está preparado técnicamente para ser animado con eficiencia, y se integra de manera genuina al universo construido a partir de las culturas polinesias.</p></div>
+  </div>
+  <div class="cta-row"><button type="button" class="btn-cta" onclick="showPage('contacto')">CONSTRUYAMOS ALGO INCREÍBLE.</button></div>
+</div>
+
+<!-- ═══════════════ DETALLE: PERSONAJE TRADICIONAL ═══════════════ -->
+<div id="detalle-wb-2" class="page">
+  <div class="det-top">
+    <button type="button" class="btn-back" onclick="showPage('proyectos')"><i class="fas fa-arrow-left"></i></button>
+  </div>
+  <div class="det-banner">
+    <div class="det-banner-text"><h1>PERSONAJE TRADICIONAL</h1><div class="dsub">Diseño Conceptual</div></div>
+    <div class="dbg"><img src="images/Foto arriba de proyecto.PNG" alt="Proyecto editorial"></div>
+  </div>
+  <p class="det-desc">RENDER es una revista enfocada en la industria de la animación, pensada para el público mexicano. Su contenido abarca reportajes de fondo, noticias de la industria y secciones de making off que muestran el proceso detrás de las producciones animadas más relevantes. El objetivo era crear una publicación que tratara la animación con la seriedad editorial que merece: como industria, como arte y como cultura.</p>
+  <div class="proc-tabs">
+    <button type="button" class="proc-tab active" onclick="switchProc('w2-idea',this)" title="Ideación"><i class="fas fa-lightbulb"></i></button>
+    <button type="button" class="proc-tab" onclick="switchProc('w2-dev',this)" title="Desarrollo Visual"><i class="fas fa-pen-nib"></i></button>
+    <button type="button" class="proc-tab" onclick="switchProc('w2-adj',this)" title="Ajustes"><i class="fas fa-desktop"></i></button>
+    <button type="button" class="proc-tab" onclick="switchProc('w2-fin',this)" title="Resultado Final"><i class="fas fa-book"></i></button>
+  </div>
+  <div id="w2-idea" class="proc-content active">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Ideacion revista.PNG"></div></div>
+    <div class="proc-text"><h3>IDEACIÓN</h3><p>El punto de partida fue definir la identidad de la revista: ¿a quién le habla, de qué habla y cómo lo dice? RENDER se dirige a un público mexicano interesado en la animación, ya sea desde la práctica profesional, la formación o la pasión por el medio. Eso implicaba un tono que combinara rigor editorial con accesibilidad, sin caer ni en lo académico ni en lo superficial.</p><p>Se definió la arquitectura de contenidos en cuatro secciones: Toon News para noticias y novedades de la industria, Industria para análisis y contexto del sector, Así Se Hizo para los making off y procesos de producción, y Toon+ para contenido de cultura animada más ligero y de referencia.</p></div>
+  </div>
+  <div id="w2-dev" class="proc-content">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Conceptualizacion.PNG"></div></div>
+    <div class="proc-text"><h3>DESARROLLO VISUAL</h3><p>El diseño visual de RENDER buscaba reflejar el mundo al que se dirige: una revista sobre animación debe tener personalidad gráfica, no solo estructura funcional. Se trabajó con tipografía display de peso fuerte para los encabezados, generando un carácter editorial contundente, y se estableció una paleta contenida centrada en el verde oscuro como color institucional, complementada con blancos y negros para los interiores.</p><p>La maqueta se construyó sobre una retícula flexible que permite convivir texto, imagen y elementos gráficos grandes sin perder legibilidad. Cada sección tiene una presentación visual propia que la diferencia dentro de la misma publicación, manteniendo coherencia en el sistema general.</p></div>
+  </div>
+  <div id="w2-adj" class="proc-content">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Proyecto final.PNG"></div></div>
+    <div class="proc-text"><h3>AJUSTES</h3><p>Durante el desarrollo se afinaron las decisiones tipográficas y de composición para que la revista funcionara tanto en páginas muy visuales —como las de portada de sección y making off— como en páginas de texto denso, que requieren mayor estructura y ritmo de lectura.</p><p>Se ajustaron jerarquías de texto, márgenes y el tratamiento de imágenes para lograr consistencia a lo largo de los 16 páginas. También se revisó el tono editorial de cada sección para asegurar que el cambio de voz entre noticias, análisis e historias de producción fuera natural y legible para el lector.</p></div>
+  </div>
+  <div id="w2-fin" class="proc-content">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/pwb_2.JPG"></div></div>
+    <div class="proc-text"><h3>RESULTADO FINAL</h3><p>El resultado es una revista funcional y con identidad propia, que cubre distintos ángulos de la industria de la animación desde una perspectiva mexicana. RENDER demuestra que es posible hacer periodismo especializado en animación con criterio editorial, diseño cuidado y contenido de valor, dirigido a una audiencia que raramente encuentra publicaciones pensadas para ella.</p></div>
+  </div>
+  <div class="cta-row"><button type="button" class="btn-cta" onclick="showPage('contacto')">CONSTRUYAMOS ALGO INCREÍBLE.</button></div>
+</div>
+
+<!-- ═══════════════ DETALLE: LANZAMIENTO ═══════════════ -->
+<div id="detalle-wb-3" class="page">
+  <div class="det-top">
+    <button type="button" class="btn-back" onclick="showPage('proyectos')"><i class="fas fa-arrow-left"></i></button>
+  </div>
+  <div class="det-banner">
+    <div class="det-banner-text"><h1>Museo Virtual</h1><div class="dsub">Diseño Conceptual</div></div>
+    <div class="dbg"><img src="images/Proyecto arriba FEAR.jpg" alt="Lanzamiento"></div>
+  </div>
+  <p class="det-desc">Line of Fear es una experiencia virtual de museo que nace del amor al terror como género, como estética y como fenómeno cultural. A través de una serie de piezas de ilustración digital, el proyecto explora el horror —clásico y contemporáneo— no como algo que se consume pasivamente, sino como un espejo de las inquietudes colectivas de cada época.</p>
+  <div class="proc-tabs">
+    <button type="button" class="proc-tab active" onclick="switchProc('w3-idea',this)" title="Ideación"><i class="fas fa-lightbulb"></i></button>
+    <button type="button" class="proc-tab" onclick="switchProc('w3-dev',this)" title="Desarrollo Visual"><i class="fas fa-pen-nib"></i></button>
+    <button type="button" class="proc-tab" onclick="switchProc('w3-adj',this)" title="Ajustes"><i class="fas fa-desktop"></i></button>
+    <button type="button" class="proc-tab" onclick="switchProc('w3-fin',this)" title="Resultado Final"><i class="fas fa-book"></i></button>
+  </div>
+  <div id="w3-idea" class="proc-content active">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Ideación.jpg"></div></div>
+    <div class="proc-text"><h3>IDEACIÓN</h3><p>El proyecto surge de una pregunta personal: ¿qué dice el terror sobre nosotros? No como género de sustos, sino como lenguaje que refleja miedos sociales reales. Esa pregunta dio forma a una serie en la que cada pieza parte de una obra —El extraño mundo de Jack, Rocky Horror, Jurassic Park, y la reinterpreta visualmente desde una técnica vectorial específica.</p><p>La intención no era ilustrar películas sino destilar su esencia simbólica: qué representa cada monstruo, qué miedo cultural encarna, qué sigue siendo vigente. El hilo conductor es la línea —limpia, directa, vectorial— como herramienta para hablar de lo oscuro sin abandonar la claridad formal.</p></div>
+  </div>
+  <div id="w3-dev" class="proc-content">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Conceptualización FEAR.jpg"></div></div>
+    <div class="proc-text"><h3>DESARROLLO VISUAL</h3><p>Cada pieza de la serie responde a una técnica diferente —espiral tipográfico, distorsión, fusión, deformación libre, islas, 3D— lo que convierte el proyecto en un laboratorio técnico además de un ejercicio conceptual. La restricción de trabajar con líneas simples y colores planos no limita la expresividad; la concentra.</p><p>El universo visual de Line of Fear oscila entre lo festivo y lo perturbador, entre lo clásico y lo contemporáneo, entre el humor negro y la emoción genuina. Esa tensión es intencional: el terror más interesante no es el que asusta de manera directa, sino el que incomoda, sorprende o conmueve desde un ángulo inesperado.</p></div>
+  </div>
+  <div id="w3-adj" class="proc-content">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Ajustes FEAR.jpg"></div></div>
+    <div class="proc-text"><h3>AJUSTES</h3><p>A lo largo del desarrollo se fue definiendo qué obras merecían un tratamiento más conceptual y cuáles eran exploraciones técnicas puras. Las piezas más sólidas son aquellas donde la técnica y el concepto se refuerzan mutuamente: la distorsión en F.O.G. que hace eco de la deformación del tiempo, la espiral tipográfica que envuelve al espectador como la canción misma, o el humor de Terror real donde los miedos reales de la adultez eclipsan al horror sobrenatural.</p><p>Este proceso ayudó a afinar el criterio curatorial de la experiencia: no todas las piezas tienen el mismo peso narrativo, y reconocer eso es parte del resultado.</p></div>
+  </div>
+  <div id="w3-fin" class="proc-content">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Final FEAR.jpg"></div></div>
+    <div class="proc-text"><h3>RESULTADO FINAL</h3><p>Line of Fear es un museo virtual que funciona como autorretrato cultural: habla de las obras que han marcado una mirada, de las técnicas que se dominan y del terror como lenguaje que merece tomarse en serio. El resultado es una experiencia que mezcla referencias clásicas con reinterpretaciones contemporáneas, demostrando que el horror tiene tanto que decir sobre la humanidad como cualquier otro género.</p><p>https://metasteps.com/viewer/d3bab465-2076-4c4a-91d5-e8607e132860</p></div>
+  </div>
+  <div class="cta-row"><button type="button" class="btn-cta" onclick="showPage('contacto')">CONSTRUYAMOS ALGO INCREÍBLE.</button></div>
+</div>
+
+<!-- ═══════════════ DETALLE: DA'PA ═══════════════ -->
+<div id="detalle-brand-1" class="page">
+  <div class="det-top">
+    <button type="button" class="btn-back" onclick="showPage('proyectos')"><i class="fas fa-arrow-left"></i></button>
+  </div>
+  <div class="det-banner">
+    <div class="det-banner-text"><h1>Colitas contentas</h1><div class="dsub">Branding y Diseño</div></div>
+    <div class="dbg"><img src="images/Principal.jpg" alt="Da'Pa"></div>
+  </div>
+  <p class="det-desc">Colitas Contentas es una empresa real de cuidado de mascotas que ofrece paseos, hotel, guardería, grooming y adiestramiento. El proyecto nació de la necesidad de darle una identidad visual coherente a un negocio propio: construir desde cero una marca que comunicara calidez, confianza y profesionalismo, sin perder el tono cercano y afectivo que define al servicio.</p>
+  <div class="proc-tabs">
+    <button type="button" class="proc-tab active" onclick="switchProc('b1-idea',this)" title="Ideación"><i class="fas fa-lightbulb"></i></button>
+    <button type="button" class="proc-tab" onclick="switchProc('b1-dev',this)" title="Desarrollo Visual"><i class="fas fa-pen-nib"></i></button>
+    <button type="button" class="proc-tab" onclick="switchProc('b1-adj',this)" title="Ajustes"><i class="fas fa-desktop"></i></button>
+    <button type="button" class="proc-tab" onclick="switchProc('b1-fin',this)" title="Resultado Final"><i class="fas fa-book"></i></button>
+  </div>
+  <div id="b1-idea" class="proc-content active">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Ideacion COlitas.jpg"></div></div>
+    <div class="proc-text"><h3>IDEACIÓN</h3><p>El punto de partida fue entender qué tipo de vínculo tiene la marca con sus clientes. Colitas Contentas no vende un servicio frío de logística; vende tranquilidad y amor hacia las mascotas. Eso implicaba una identidad que se sintiera cálida y accesible, pero con suficiente solidez para proyectar confianza profesional.</p><p>Se definieron la misión, visión, valores y filosofía de la empresa como base conceptual antes de tomar cualquier decisión visual. El nombre mismo —colitas contentas— ya apuntaba hacia una paleta, un tono tipográfico y un registro emocional específico: alegría, movimiento y afecto.</p></div>
+  </div>
+  <div id="b1-dev" class="proc-content">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Conceptualizacion.jpg"></div></div>
+    <div class="proc-text"><h3>DESARROLLO VISUAL</h3><p>El logotipo integra tipografía y figura de manera orgánica: las letras construyen la silueta de un perro, de modo que forma y contenido son inseparables. Se definió una paleta contenida en amarillo dorado, café oscuro y crema, con suficiente contraste para funcionar en positivo, negativo y distintos fondos.</p><p>El sistema de identidad se desarrolló pensando en todos los puntos de contacto de la marca: desde formatos pequeños como tarjetas y flyers hasta aplicaciones de gran formato como espectaculares y vallas publicitarias. Cada pieza mantiene coherencia tipográfica —Gill Sans MT Condensed y Myriad Pro— y respeta las reglas de uso del logotipo establecidas en el manual corporativo.</p></div>
+  </div>
+  <div id="b1-adj" class="proc-content">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Proyecto final colitas.jpg"></div></div>
+    <div class="proc-text"><h3>AJUSTES</h3><p>Durante el proceso se afinaron las restricciones de uso del logotipo para garantizar su legibilidad en cualquier contexto: se establecieron tamaños mínimo (1 cm) y máximo (5 m), los fondos permitidos y prohibidos, y las variaciones cromáticas válidas. Esto aseguró que la identidad funcionara tanto en un parabús nocturno como en un flyer de mano.</p><p>En paralelo, se desarrolló una campaña de contenido para redes sociales con tono desenfadado y copywriting propio de la marca —"¿Listo pa' pasear?", "El tamaño no importa"— que tradujo la identidad visual al lenguaje digital sin perder personalidad.</p></div>
+  </div>
+  <div id="b1-fin" class="proc-content">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/perro_viajero.jpg"></div></div>
+    <div class="proc-text"><h3>RESULTADO FINAL</h3><p>El resultado es un sistema de identidad completo que cubre desde el manual de marca hasta la presencia digital y los materiales impresos. Colitas Contentas tiene una voz, una cara y un carácter propios, capaces de competir con marcas establecidas del sector y de crecer con la empresa. El proyecto demuestra que un negocio real, por pequeño que sea, merece y se beneficia de un diseño pensado con la misma seriedad que cualquier cliente de agencia.</p></div>
+  </div>
+  <div class="cta-row"><button type="button" class="btn-cta" onclick="showPage('contacto')">CONSTRUYAMOS ALGO INCREÍBLE.</button></div>
+</div>
+
+<!-- ═══════════════ DETALLE: ELI ═══════════════ -->
+<div id="detalle-brand-2" class="page">
+  <div class="det-top">
+    <button type="button" class="btn-back" onclick="showPage('proyectos')"><i class="fas fa-arrow-left"></i></button>
+  </div>
+  <div class="det-banner">
+    <div class="det-banner-text"><h1>En mis Patitas</h1><div class="dsub">Branding y Diseño</div></div>
+    <div class="dbg"><img src="images/pb_2.png" alt="Eli"></div>
+  </div>
+  <p class="det-desc">En mis patitas es un proyecto de identidad visual para un veneto con el mismo nombre, un espacio pensado para reunir a personas y mascotas a través de actividades que fomentaran la adopción responsable. El reto fue construir una marca que se sintiera acogedora y emotiva, capaz de conectar con el público desde el afecto — y el personaje de Eli fue el corazón desde el que se construyó todo lo demás.</p>
+  <div class="proc-tabs">
+    <button type="button" class="proc-tab active" onclick="switchProc('b2-idea',this)" title="Ideación"><i class="fas fa-lightbulb"></i></button>
+    <button type="button" class="proc-tab" onclick="switchProc('b2-dev',this)" title="Desarrollo Visual"><i class="fas fa-pen-nib"></i></button>
+    <button type="button" class="proc-tab" onclick="switchProc('b2-adj',this)" title="Ajustes"><i class="fas fa-desktop"></i></button>
+    <button type="button" class="proc-tab" onclick="switchProc('b2-fin',this)" title="Resultado Final"><i class="fas fa-book"></i></button>
+  </div>
+  <div id="b2-idea" class="proc-content active">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Moodboard_.png"></div></div>
+    <div class="proc-text"><h3>IDEACIÓN</h3><p>El concepto de la marca parte de un lugar muy específico: el perro callejero mexicano. Esa figura blanca, de pelaje esponjoso y presencia inconfundible en las calles, carga consigo décadas de historias no contadas — perros que esperan, perros que acompañan, perros que buscan un hogar. Eli nace de ese imaginario. No es un perro genérico ni una mascota decorativa: es la síntesis visual de todos esos perritos que el proyecto quiere visibilizar y dar en adopción.</p><p>Antes de definir tipografía, paleta o composición, la pregunta fue quién es Eli y qué representa. Esa pregunta guió todas las decisiones de diseño posteriores.</p></div>
+  </div>
+  <div id="b2-dev" class="proc-content">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Eli_Mesa de trabajo 3.png"></div></div>
+    <div class="proc-text"><h3>DESARROLLO VISUAL</h3><p>Eli se diseñó con formas simples, redondeadas y expresivas — silueta esponjosa, orejas caídas, mirada curiosa — capturando la esencia del perro criollo callejero sin caricaturizarlo. La clave fue encontrar el nivel de abstracción justo: suficientemente ilustrado para tener carácter y ternura, suficientemente limpio para funcionar como pieza gráfica dentro del logotipo.</p><p>Su rol dentro del sistema de identidad va más allá del ícono: Eli es la mascota oficial de la marca, el personaje que le da nombre a las historias reales de los perritos que el veneto acerca al público. Cada animal que pasa por En mis patitas tiene una historia, y Eli es quien las representa a todas.</p><p>El logotipo se construyó alrededor de él — tipografía orgánica, paleta en café oscuro y blanco, patrón de fondo con huellas y huesos — generando un sistema donde Eli no decora la marca sino que la ancla.</p></div>
+  </div>
+  <div id="b2-adj" class="proc-content">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Patitas [Recuperado]_Mesa de trabajo 2.png"></div></div>
+    <div class="proc-text"><h3>AJUSTES</h3><p>Se desarrollaron tres presentaciones del logotipo —horizontal, vertical y reducción— probando en cada una que Eli mantuviera presencia y legibilidad sin perder su carácter. En la versión de reducción, donde la ilustración se minimiza al máximo, la silueta del perro sigue siendo reconocible: ese fue el criterio de validación del diseño.</p><p>También se trabajó el equilibrio entre la figura de Eli y el texto para que en ninguna presentación uno dominara al otro, sino que funcionaran como una unidad con peso visual propio.</p></div>
+  </div>
+  <div id="b2-fin" class="proc-content">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Shania 1_Mesa de trabajo 1.png"></div></div>
+    <div class="proc-text"><h3>RESULTADO FINAL</h3><p>El resultado es una identidad que tiene alma precisamente porque tiene un personaje real detrás. Eli no es un recurso gráfico — es un argumento: la razón por la que la marca existe, hecha ilustración. En mis patitas construye su identidad desde la historia del perro callejero mexicano, transformando algo cotidiano e ignorado en el símbolo de un proyecto de adopción con propósito y corazón.</p></div>
+  </div>
+  <div class="cta-row"><button type="button" class="btn-cta" onclick="showPage('contacto')">CONSTRUYAMOS ALGO INCREÍBLE.</button></div>
+</div>
+
+<!-- ═══════════════ DETALLE: ROJA RADA ═══════════════ -->
+<div id="detalle-brand-3" class="page">
+  <div class="det-top">
+    <button type="button" class="btn-back" onclick="showPage('proyectos')"><i class="fas fa-arrow-left"></i></button>
+  </div>
+  <div class="det-banner">
+    <div class="det-banner-text"><h1>Ruta de Rueda</h1><div class="dsub">Branding y Diseño</div></div>
+    <div class="dbg"><img src="images/pb_3.png" alt="Roja Rada"></div>
+  </div>
+  <p class="det-desc">Ruta de Rueda es una empresa de tours por carretera que ofrece experiencias de viaje personalizadas a través de la República Mexicana en camioneta. El proyecto nació de una historia familiar real: convertir décadas de conocimiento en carretera en un servicio turístico auténtico, seguro y memorable para quienes quieren descubrir México desde adentro.</p>
+  <div class="proc-tabs">
+    <button type="button" class="proc-tab active" onclick="switchProc('b3-idea',this)" title="Ideación"><i class="fas fa-lightbulb"></i></button>
+    <button type="button" class="proc-tab" onclick="switchProc('b3-dev',this)" title="Desarrollo Visual"><i class="fas fa-pen-nib"></i></button>
+    <button type="button" class="proc-tab" onclick="switchProc('b3-adj',this)" title="Ajustes"><i class="fas fa-desktop"></i></button>
+    <button type="button" class="proc-tab" onclick="switchProc('b3-fin',this)" title="Resultado Final"><i class="fas fa-book"></i></button>
+  </div>
+  <div id="b3-idea" class="proc-content active">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/Ruta de rueda.png"></div></div>
+    <div class="proc-text"><h3>IDEACIÓN</h3><p>El punto de partida fue una historia de reinvención. Omar Monroy pasó años recorriendo México de norte a sur transportando mercancías en tráiler, acumulando un conocimiento profundo de rutas, paradas y geografía que muy pocos tienen. Cuando ese negocio cerró, ese conocimiento no desapareció — se transformó.</p><p>Ese saber de carretera se reconvirtió en una propuesta de valor turística: no solo llevar a personas de un punto a otro, sino construir experiencias que conecten a los viajeros con la riqueza cultural, natural y gastronómica de México. Esa narrativa de origen — el trailero que se convierte en guía — fue el concepto central desde el que se desarrolló todo el proyecto.</p></div>
+  </div>
+  <div id="b3-dev" class="proc-content">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/ruta de rueda-02.png"></div></div>
+    <div class="proc-text"><h3>DESARROLLO VISUAL</h3><p>El proyecto se estructuró como una propuesta de negocio completa. Se definieron la misión, visión y valores de la empresa, así como el diseño general del servicio: vehículos tipo van equipados con comodidad, conductores capacitados en seguridad y primeros auxilios, e itinerarios que incluyen pueblos mágicos, sitios históricos, reservas naturales y paradas gastronómicas.</p><p>Se diseñó también el flujo completo de la experiencia del usuario en cuatro etapas — planificación y reserva, el día del viaje, experiencia en los destinos y fin del tour — garantizando que cada punto de contacto con el cliente tuviera coherencia y calidad.</p></div>
+  </div>
+  <div id="b3-adj" class="proc-content">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/ruta de rueda-03.png"></div></div>
+    <div class="proc-text"><h3>AJUSTES</h3><p>Durante el desarrollo se realizó un análisis de ventajas y desventajas del modelo de negocio. Se identificaron como fortalezas el conocimiento real de carretera, la capacidad de personalización y el enfoque en turismo cultural auténtico. Como retos principales: los altos costos operativos de mantenimiento vehicular, la estacionalidad del turismo y la necesidad de diferenciarse en un mercado competido.</p><p>Ese análisis honesto permitió afinar la propuesta de valor y definir qué hace a Ruta de Rueda distinta: no es una agencia de viajes convencional, sino una experiencia conducida por alguien que conoce las carreteras mexicanas como su propia casa.</p></div>
+  </div>
+  <div id="b3-fin" class="proc-content">
+    <div class="proc-imgs"><div class="proc-img"><img src="images/ruta de rueda_Mesa de trabajo 1.png"></div></div>
+    <div class="proc-text"><h3>RESULTADO FINAL</h3><p>El resultado es un proyecto de empresa con base real, construido desde una historia genuina y desarrollado con rigor metodológico. Ruta de Rueda demuestra que el diseño no solo se aplica a lo visual: también sirve para estructurar ideas, comunicar propuestas de valor y darle forma a un negocio con propósito. El proyecto conecta experiencia familiar, conocimiento del territorio y vocación por mostrar lo mejor de México.</p></div>
+  </div>
+  <div class="cta-row"><button type="button" class="btn-cta" onclick="showPage('contacto')">CONSTRUYAMOS ALGO INCREÍBLE.</button></div>
+</div>
+
+<!-- ═══════════════ DEMO REELS ═══════════════ -->
+<div id="demo-reels" class="page">
+  <div class="page-banner">
+    <h1>DEMO REELS</h1>
+    <div class="banner-img">
+      <img src="images/banner_demo.png" alt="Demo Reels">
+    </div>
+  </div>
+
+  <p class="demo-intro">Este demo reel reúne una selección de mis trabajos más representativos en animación del último año, reflejando mi desarrollo técnico y creativo en distintas áreas del medio. A través de estas piezas, exploro el movimiento, la narrativa y la construcción visual, mostrando mi enfoque en la creación de contenido dinámico, coherente y con intención estética.</p>
+
+  <div class="tab-nav">
+    <button type="button" class="tab-btn active" onclick="switchTab('demo-reels','dtab-3d',this)">MODELADO Y<br>ANIMACIÓN 3D</button>
+  </div>
+
+  <div id="dtab-3d" class="tab-content active">
+    <div class="demo-body">
+      <div class="video-box">
+        <video
+          controls
+          poster="images/Demo reel.jpg">
+          <source src="images/demo-reel.mp4" type="video/mp4">
+          Tu navegador no soporta el elemento de video.
+        </video>
+      </div>
+      <div class="demo-info">
+        <h2>MODELADO Y ANIMACIÓN 3D</h2>
+        <p>Este demo reel reúne una selección de mis trabajos en modelado y animación 3D, donde exploro la creación de personajes, objetos y entornos digitales. A través de estas piezas, presento mi proceso desde la construcción de formas y texturas hasta la integración del movimiento.</p>
+        <div class="yr">Año 2025</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-row">
+    <button type="button" class="btn-cta" onclick="showPage('contacto')">CONSTRUYAMOS ALGO INCREÍBLE.</button>
+  </div>
+</div>
+
+<!-- ═══════════════ SERVICIOS ═══════════════ -->
+<div id="servicios" class="page">
+  <div class="proj-banner">
+    <img src="images/banner_servicios.jpeg" alt="Servicios">
+    <h1>SERVICIOS</h1>
+  </div>
+  <p class="serv-intro">En esta sección presento los servicios que ofrezco, enfocados en la creación de soluciones visuales y experiencias integrales que combinan creatividad, estrategia y narrativa. Mi trabajo abarca distintas áreas del diseño y la producción digital, desde la construcción de identidades de marca hasta el desarrollo de experiencias interactivas y universos narrativos.</p>
+
+  <div class="serv-list">
+    <div class="serv-card serv-3d" onclick="showPage('contacto')" style="cursor:pointer">
+      <div class="serv-txt">
+        <h3>MODELADO Y ANIMACIÓN 3D</h3>
+        <p>Creo piezas tridimensionales que combinan forma, textura y movimiento, dando vida a conceptos a través de animaciones dinámicas y visualmente atractivas.</p>
+      </div>
+      <div class="serv-img">
+        <img src="images/p3d_2.jpg" alt="3D">
+      </div>
+    </div>
+
+    <div class="serv-card serv-brand rev" onclick="showPage('contacto')" style="cursor:pointer">
+      <div class="serv-txt">
+        <h3>BRANDING Y DISEÑO</h3>
+        <p>Desarrollo identidades visuales estratégicas que reflejan la esencia de cada marca, creando sistemas gráficos coherentes, memorables y adaptables a distintos medios.</p>
+      </div>
+      <div class="serv-img">
+        <img src="images/serv_brand.png" alt="Branding">
+      </div>
+    </div>
+
+    <div class="serv-card serv-wb" onclick="showPage('contacto')" style="cursor:pointer">
+      <div class="serv-txt">
+        <h3>DISEÑO CONCEPTUAL</h3>
+        <p>Construyo universos conceptuales con identidad, historia y coherencia interna, desarrollando personajes y contextos que enriquecen la narrativa y generan conexión emocional.</p>
+      </div>
+      <div class="serv-img">
+        <img src="images/pwb_1.jpg" alt="Worldbuilding">
+      </div>
+    </div>
+
+    <div class="serv-card serv-ux rev" onclick="showPage('contacto')" style="cursor:pointer">
+      <div class="serv-txt">
+        <h3>DISEÑO UX Y UI</h3>
+        <p>Diseño experiencias digitales intuitivas y funcionales, centradas en el usuario, que facilitan la interacción y mejoran la comunicación entre la marca y su audiencia.</p>
+      </div>
+      <div class="serv-img">
+        <img src="images/serv_ux.jpg" alt="UX UI">
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-row">
+    <button type="button" class="btn-cta" onclick="showPage('contacto')">CONSTRUYAMOS ALGO INCREÍBLE.</button>
+  </div>
+</div>
+
+<!-- ═══════════════ CONTACTO ═══════════════ -->
+<div id="contacto" class="page">
+  <div class="cont-wrap">
+    <div class="cont-left">
+      <h1>CONSTRUYAMOS TU<br>PRÓXIMO PROYECTO</h1>
+      <p>Gracias por tu tiempo. Si tienes una idea en mente o quieres colaborar, no dudes en contactarme. Estaré encantado de trabajar juntos y dar vida a nuevos proyectos.</p>
+      <a href="tel:5574558435" class="clink">
+        <i class="fas fa-phone"></i>
+        <span>5574558435</span>
+      </a>
+      <a href="https://instagram.com/ald0_ml" target="_blank" class="clink">
+        <i class="fab fa-instagram"></i>
+        <span>ald0_ml</span>
+      </a>
+      <a href="https://linkedin.com/in/AldoML" target="_blank" class="clink">
+        <i class="fab fa-linkedin"></i>
+        <span>AldoML</span>
+      </a>
+    </div>
+    <div>
+      <div class="cont-form">
+        <div class="ficon"><i class="fas fa-envelope" style="font-size:1.8rem; color:white;"></i> →</div>
+        <input type="email" placeholder="Tu correo">
+        <input type="text"  placeholder="Asunto">
+        <textarea placeholder="Mensaje"></textarea>
+        <button type="button" class="btn-send"><i class="fas fa-paper-plane"></i> ENVIAR</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ JS ═══════════════ -->
+<script src="main.js"></script>
+</body>
+</html>
