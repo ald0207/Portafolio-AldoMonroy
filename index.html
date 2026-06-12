@@ -733,17 +733,17 @@
       </a>
     </div>
     <div>
-      <div class="cont-form">
-        <div class="ficon"><i class="fas fa-envelope" style="font-size:1.8rem; color:white;"></i> →</div>
-        <input type="email" placeholder="Tu correo">
-        <input type="text"  placeholder="Asunto">
-        <textarea placeholder="Mensaje"></textarea>
-        <button type="button" class="btn-send"><i class="fas fa-paper-plane"></i> ENVIAR</button>
-      </div>
+      <form id="contactForm" class="cont-form" action="https://formspree.io/f/mdavpkrb" method="POST">
+        <div class="ficon"><i class="fas fa-envelope"></i> →</div>
+        <input type="email" name="email" placeholder="Tu correo" required>
+        <input type="text" name="asunto" placeholder="Asunto" required>
+        <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+        <button type="submit" class="btn-send"><i class="fas fa-paper-plane"></i> ENVIAR</button>
+        <p id="formMsg" class="form-msg"></p>
+      </form>
     </div>
   </div>
 </div>
-
 <!-- ═══════════════ JS ═══════════════ -->
 <script src="main.js"></script>
 </body>
