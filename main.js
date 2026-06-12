@@ -260,3 +260,43 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(() => homeEl.classList.add('home-loaded'), 50);
   }
 });
+
+/* ── enviar correo ── */
+
+const form = document.getElementById('contactForm');
+const formMsg = document.getElementById('formMsg');
+
+if (form) {
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const data = new FormData(form);
+    const button = form.querySelector('.btn-send');
+
+    button.disabled = true;
+    formMsg.textContent = 'Enviando...';
+    formMsg.className = 'form-msg sending';
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        formMsg.textContent = '¡Mensaje enviado con éxito! Te responderé pronto.';
+        formMsg.className = 'form-msg success';
+        form.reset();
+      } else {
+        formMsg.textContent = 'Hubo un error al enviar. Intenta de nuevo o escríbeme directo a amonroylabastida@gmail.com';
+        formMsg.className = 'form-msg error';
+      }
+    } catch (error) {
+      formMsg.textContent = 'Hubo un error al enviar. Intenta de nuevo o escríbeme directo a amonroylabastida@gmail.com';
+      formMsg.className = 'form-msg error';
+    } finally {
+      button.disabled = false;
+    }
+  });
+}
