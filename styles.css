@@ -994,3 +994,16 @@ nav {
   animation: aboutFadeUp 0.5s ease forwards;
 }
 
+.ficon i {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.form-msg {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.form-msg.success { color: #4caf50; }
+.form-msg.error { color: #f44336; }
+.form-msg.sending { color: #ccc; }
